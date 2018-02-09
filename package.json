@@ -1,0 +1,13 @@
+{
+  "name": "hellojs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "sergey.aleksandrov <sergey.aleksandrov@avanade.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.0"
+  }
+}

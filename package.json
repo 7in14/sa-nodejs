@@ -1,11 +1,12 @@
 {
   "name": "hellojs",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "hapiStart.js",
+  "engines": {
+    "node": ">=6.9.1"
+  },
   "scripts": {
-    "start": "node hapiStart.js",
-    "test": "lab -c -L -C -l -v --threshold 95 --assert code",
-    "test-cover": "lab -c -L --assert code -r html -o ./test/artifacts/coverage.html && start ./test/artifacts/coverage.html"
+    "start": "node hapiStart.js"
   },
   "author": "sergey.aleksandrov <sergey.aleksandrov@avanade.com>",
   "license": "MIT",

@@ -22,6 +22,15 @@ const setupServer = () => {
         }
     });
 
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: function (request, reply) {
+
+            reply(`Default route`);
+        }
+    });
+
     return server;
 };
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon hapiStart.js",
+    "start": "node hapiStart.js",
     "test": "lab -c -L -C -l -v --threshold 95 --assert code",
     "test-cover": "lab -c -L --assert code -r html -o ./test/artifacts/coverage.html && start ./test/artifacts/coverage.html"
   },

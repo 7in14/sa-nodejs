@@ -2,6 +2,7 @@
 
 const Hapi = require('hapi');
 const Pinger = require('./utils/pinger');
+const mongoController = require('./controllers/mongoController');
 
 const setupServer = () => {
 
@@ -30,6 +31,25 @@ const setupServer = () => {
             reply(`Default route`);
         }
     });
+
+    server.route({
+        method: 'GET',
+        path: '/allData',
+        handler: mongoController.getAll
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/dataSources',
+        handler: mongoController.dataSources
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/dataSource/{id}',
+        handler: mongoController.getById
+    });
+
 
     return server;
 };

@@ -6,15 +6,18 @@
     "node": ">=6.9.1"
   },
   "scripts": {
-    "start": "node hapiStart.js",
+    "start": "nodemon hapiStart.js",
     "test": "lab -c -L -C -l -v --threshold 95 --assert code",
     "test-cover": "lab -c -L --assert code -r html -o ./test/artifacts/coverage.html && start ./test/artifacts/coverage.html"
   },
   "author": "sergey.aleksandrov <sergey.aleksandrov@avanade.com>",
   "license": "MIT",
   "dependencies": {
+    "async-request": "^1.2.0",
     "chalk": "^2.3.0",
-    "hapi": "16"
+    "hapi": "16",
+    "lodash": "^4.17.5",
+    "mongodb": "^2.2.33"
   },
   "devDependencies": {
     "code": "^5.1.2",

@@ -3,6 +3,7 @@
 const Hapi = require('hapi');
 const Pinger = require('./utils/pinger');
 const mongoController = require('./controllers/mongoController');
+const releighController = require('./controllers/releighController');
 
 const setupServer = () => {
 
@@ -48,6 +49,24 @@ const setupServer = () => {
         method: 'GET',
         path: '/dataSource/{id}',
         handler: mongoController.getById
+    });
+
+    server.route({
+        method: 'PUT',
+        path: '/dataSource',
+        handler: mongoController.addNotifier
+    });
+
+    server.route({
+        method: 'DELETE',
+        path: '/dataSource/{id}',
+        handler: mongoController.deleteNotifier
+    });
+
+    server.route({
+       method: 'GET',
+       path: '/releigh/crime',
+       handler: releighController.getCrimeData
     });
 
 

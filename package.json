@@ -16,8 +16,11 @@
     "async-request": "^1.2.0",
     "chalk": "^2.3.0",
     "hapi": "16",
+    "hapi-swagger": "^7.10.0",
+    "inert": "^3.2.0",
     "lodash": "^4.17.5",
-    "mongodb": "^2.2.33"
+    "mongodb": "^2.2.33",
+    "vision": "^4.1.1"
   },
   "devDependencies": {
     "code": "^5.1.2",
